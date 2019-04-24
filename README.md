@@ -55,3 +55,32 @@ I retrianed mobileNet-SSD,my number of classfication is 5
 **The bug has been fixed**
 
 ![image](testPic/test1.png)
+
+
+# Jetson nano compiler
+# you can not use:
+mkdir build 
+then cmake .. 
+
+this will have some problem
+
+
+# 1.fatal error: cblas.h: No such file or directory
+
+sudo apt-get install libopenblas-dev
+
+# 2.fatal error: glog/logging.h: No such file or directory
+
+sudo apt-get install libgoogle-glog-dev
+
+# 3./MobileNet-SSD-TensorRT/tensorNet.h:21:10: error: ‘vector’ in namespace ‘std’ does not name a template type
+     std::vector<Record> mProfile;
+
+
+在tensorNet.h文件中加入：#include <vector>
+  
+  
+ # 4.complete the compiler
+
+
+
