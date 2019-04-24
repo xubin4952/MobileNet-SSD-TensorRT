@@ -77,10 +77,17 @@ sudo apt-get install libgoogle-glog-dev
      std::vector<Record> mProfile;
 
 
-在tensorNet.h文件中加入：#include <vector>
+tensorNet.h   add :#include <vector>
   
   
  # 4.complete the compiler
+ 
+# 5.when we execute the program :  Segmentation fault (core dumped)
+
+rm MobileNetSSD_deploy.caffemodel.1.tensorcache
+
+
+
 
 
 
